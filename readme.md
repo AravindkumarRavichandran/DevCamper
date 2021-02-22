@@ -29,9 +29,3 @@ node seeder -d
 # Import all data
 node seeder -i
 ```
-
-## Demo
-
-The API is live at (https://devcamper08.herokuapp.com)
-
-Extensive documentation with examples [here](https://documenter.getpostman.com/view/10901252/TVKA6KvK)
