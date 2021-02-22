@@ -69,13 +69,13 @@ CourseSchema.statics.getAverageCost = async function(bootcampId) {
 
 // Call getAverageCost after save
 CourseSchema.post('save', function() {
-  //console.log(this.constructor);
+  console.log(this.constructor);
   this.constructor.getAverageCost(this.bootcamp);
 });
 
 // Call getAverageCost after remove
 CourseSchema.post('remove', function() {
-  console.log("12345678901234");
+ // console.log("12345678901234");
   this.constructor.getAverageCost(this.bootcamp);
 });
 
