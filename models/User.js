@@ -38,11 +38,12 @@ const UserSchema = new mongoose.Schema({
 
 // Encrypt password using bcrypt
 UserSchema.pre("save", async function (next) {
+  console.log("123");
   if (!this.isModified('password')) {
    return next();
   }
 
-  //console.log("99987");
+  console.log("456");
   const salt = await bcrypt.genSalt(10);
   console.log(salt.red);
   this.password = await bcrypt.hash(this.password, salt);

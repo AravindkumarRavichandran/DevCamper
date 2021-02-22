@@ -66,8 +66,8 @@ ReviewSchema.post('save', function() {
   this.constructor.getAverageRating(this.bootcamp);
 });
 
-// Call getAverageCost after remove
-ReviewSchema.post('remove', function() {
+// Call getAverageCost before remove
+ReviewSchema.pre('remove', function() {
   console.log("5678");
   this.constructor.getAverageRating(this.bootcamp);
 });
